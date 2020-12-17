@@ -2,6 +2,10 @@ package main
 
 import "fmt"
 
+func GetData() (int, int) {
+	return 100, 200
+}
+
 func main(){
 	var age int
 	fmt.Println("我的年龄是", age)
@@ -13,11 +17,8 @@ func main(){
 	fmt.Println("年龄 = ", age1)
 	var width, height int = 100, 50
 	fmt.Println("width = ", width, "height = ", height)
-	var(
-		name = "long"
-		age0 = 31
-		height0 int
-	)
-	fmt.Println("my name is", name, ", age is", age0, "and height is", height0)
-
+	
+	a, _ := GetData()
+	_, b := GetData()
+	fmt.Println("a = ", a, "b = ",b)
 }
